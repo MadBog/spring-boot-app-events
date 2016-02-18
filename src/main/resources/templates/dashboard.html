@@ -1,0 +1,5 @@
+Bine ai venit, <span sec:authentication="name">Gigi</span>!
+
+<li sec:authorize="isAuthenticated()">
+    <a href="/logout" th:href="@{/logout}"> Logout </a>
+</li>
