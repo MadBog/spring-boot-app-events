@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Comment as much as you can !!!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+</head>
+<body>
+<h1>Add your comment!</h1>
+<form action="#" th:action="@{/comment/save}" th:object="${commentModel}" method="post">
+    <p>Comment: <textarea name="comment" th:field="*{comment}"></textarea></p>
+    <p><input type="submit" value="Submit"></input></p>
+</form>
+</body>
+</html>

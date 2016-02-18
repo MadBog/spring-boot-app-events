@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Comment as much as you can !!!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+</head>
+<body>
+<h1>Published comments!</h1>
+<table th:if="${not #lists.isEmpty(comments)}" style="width:100%">
+    <tr th:each="comm : ${comments}">
+        <td th:text="${comm.username}">Created By</td>
+        <td th:text="${comm.comment}">Comment</td>
+    </tr>
+</table>
+<h2 th:if="${ #lists.isEmpty(comments)}" >You have no comments, ey!!!</h2>
+<br></br>
+<a href="/">GO TO DASHBOARD</a>
+</body>
+</html>

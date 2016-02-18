@@ -1,5 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
 Bine ai venit, <span sec:authentication="name">Gigi</span>!
 
 <li sec:authorize="isAuthenticated()">
     <a href="/logout" th:href="@{/logout}"> Logout </a>
 </li>
+<li sec:authorize="hasRole('USER')">
+    <a href="/comment" th:href="@{/comment}"> Add Comment </a>
+</li>
+<li sec:authorize="hasRole('ADMIN')">
+    <a href="/comment/list" th:href="@{/comment/list}"> Comment List</a>
+</li>
+</html>
